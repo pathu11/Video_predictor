@@ -82,9 +82,9 @@ def predict_video_for_words(isl_sentence, word_to_idx, category_to_idx, model, d
             if category:
                 word_metadata = dataset.metadata.get(word, {})
                 if 'videos' in word_metadata:
+                   
                     video_filename = word_metadata['videos'][0]
                     predicted_video_path = os.path.join(f"dataset/{category}/{word}", video_filename)
-
                     video_data = cv2.VideoCapture(predicted_video_path)
                     frames = []
                     while True:
