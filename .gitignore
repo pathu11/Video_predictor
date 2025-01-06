@@ -3,6 +3,7 @@ __pycache__/
 *.py[cod]
 
 processed_dataset/
+processed_datasetC/
 dataset/
 
 models/
@@ -14,3 +15,4 @@ models/
 *.log
 
 *.swp
+venv

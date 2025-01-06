@@ -8,7 +8,6 @@ import json
 class VideoDataset(Dataset):
     """
     A custom dataset class for loading video data based on metadata.
-
     Args:
         metadata_file (str): Path to the JSON file containing metadata for the dataset.
         split (str): The split of the dataset (e.g., 'train', 'val', 'test').
@@ -90,7 +89,6 @@ class VideoPredictionModel(nn.Module):
 def train_model():
     """
     Trains the VideoPredictionModel using the VideoDataset.
-
     This function loads the dataset, initializes the model, and trains it for 10 epochs.
     After training, the model and vocabulary mappings are saved to disk.
     """
@@ -99,9 +97,7 @@ def train_model():
     
     vocab_size = len(dataset.word_to_idx)
     num_categories = len(dataset.category_to_idx)
-    
     model = VideoPredictionModel(vocab_size, num_categories)
-    
     criterion = nn.CrossEntropyLoss()  
     optimizer = torch.optim.Adam(model.parameters(), lr=0.001)  
 
