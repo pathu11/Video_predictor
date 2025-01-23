@@ -16,3 +16,4 @@ models/
 
 *.swp
 venv
+fingerspell/
